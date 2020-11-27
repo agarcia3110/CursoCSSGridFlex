@@ -1,0 +1,75 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background: #ff9966; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ff5e62,
+    #ff9966
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  font-family: "IBM Plex Serif", serif;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+h4 {
+  font-size: 1.8rem;
+}
+p {
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+    .nosotros {
+        flex: 0 0 70%;
+    }
+    .sidebar {
+        flex: 0 0 30%;
+    }
+}
+
+.servicios {
+    display: flex;
+    flex-wrap: wrap;
+}
+.servicio {
+    background-color: cornflowerblue;
+    flex: 1;
+}
+.doble {
+    background-color: bisque;
+}
+@media (min-width:768px){
+    .servicio {
+        flex: 1;
+    }
+    .doble {
+        flex: 2;
+    }    
+}
+
+

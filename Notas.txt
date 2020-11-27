@@ -1,0 +1,63 @@
+#################################
+# Propiedades a nivel del padre #
+#################################
+
+# Para usar flex (IMPORTANTE)
+display: flex;
+
+# Direccion de ordenacion (row, column, row-reverse, colum-reverse)
+flex-direction: row;
+
+# Para ajuste de los hijos dentro del padre (nowrap, wrap, wrap-reverse) (IMPORTANTE)
+flex-wrap: wrap;
+
+# Direccion y ajuste: simplifica las dos propiedades previas (IMPORTANTE)
+flex-flow: row wrap;
+
+# Ejemplo de contenedor flex padre
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+# Alineaciones horizontales
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-around;
+justify-content: space-around;
+
+# Alineaciones verticales
+height: 400px;
+align-items: flex-start;
+align-items: flex-end;
+align-items: baseline;
+align-items: center;
+
+####################################
+# Propiedades a nivel de los hijos #
+####################################
+
+# Ordenacion de elementos hijos en el padre (Valor "-1" para poner el primero)
+order: 0;
+
+# Para hacer crecer el tamaño del hijo (se divide el ancho disponible entre el número de grow's, "1" por defecto)
+flex-grow: 1;
+
+# Para hacer decrecer el tamaño de los otros hijos
+flex-shrink: 0;
+flex-grow: 0;
+
+# Ancho mímino del hijo
+flex-basis: 50%;
+
+# Resume las 3 propiedades de tamaño (grow, shrink y basis) (IMPORTANTE)
+flex: 0 0 50%;
+
+# Alineaciones verticales (lo mismo a nivel de hijo)
+align-self: flex-start;
+align-self: flex-end;
+align-self: baseline;
+align-self: center;
