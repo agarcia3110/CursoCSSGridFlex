@@ -1,3 +1,4 @@
+
 body {
     box-sizing: border-box;
     margin:0;
@@ -24,7 +25,7 @@ nav ul {
     padding:0;
 }
 nav ul li {
-    padding: 20px;
+    padding: 1rem;
 }
 nav ul li:hover {
     background-color: #1a2770;
@@ -32,5 +33,58 @@ nav ul li:hover {
 nav ul a {
     color: white;
     text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* SENCILLO */
+.sencillo ul {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.sencillo ul li {
+    text-align: center;
+    margin-bottom: .5rem;
+    flex:1;
+}
+@media screen and (min-width: 768px) {
+    .sencillo ul {
+        flex-direction: row;
+    }
+    .sencillo ul li {
+        margin-bottom: 0;
+    }
+}
+
+/* ICONOS */
+.iconos ul li a {
+    display: flex;
+    justify-content: center;
+}
+.iconos .icono {
+    flex: 0 0 3rem;
+    font-size: 2rem;
+}
+.iconos .texto {
     font-size: 1.4rem;
+}
+.iconos .texto span {
+    font-size: .8rem;
+    display: block;
+    margin-top: .5rem;
+}
+@media screen and (min-width: 520px) {
+    .iconos ul {
+        display: flex; 
+        flex-wrap: wrap;
+    }
+    .iconos ul li {
+        box-sizing: border-box;
+        flex: 0 1 50%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .iconos ul li {
+        flex: 1;
+    }
 }
