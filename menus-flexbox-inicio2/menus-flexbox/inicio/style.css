@@ -24,7 +24,7 @@ nav ul {
     padding:0;
 }
 nav ul li {
-    padding: 20px;
+    padding: 1rem;
 }
 nav ul li:hover {
     background-color: #1a2770;
@@ -32,5 +32,31 @@ nav ul li:hover {
 nav ul a {
     color: white;
     text-decoration: none;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+}
+
+/* SENCILLO */
+.sencillo ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sencillo ul li {
+    text-align: center;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* .sencillo ul li a {
+    
+} */
+
+@media screen and (min-width:768px) {
+    .sencillo ul {
+        flex-direction: row;
+        
+    }
+    .sencillo ul li {
+        margin-bottom: 0px;
+    }
 }
