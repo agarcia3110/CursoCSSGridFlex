@@ -100,3 +100,40 @@ nav ul a {
     flex: 1;
   }
 }
+
+/* DROPDOWN */
+@media screen and (min-width: 768px) {
+    .dropdown ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .dropdown ul li {
+        position: relative;
+        flex: 1 1 100%;
+    }
+}
+.dropdown ul li ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .dropdown ul li ul {
+        display: none;
+        position: absolute;
+        top:100%;
+        left:0;
+    }
+    .dropdown ul li:hover ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #ff5e62;
+        margin: 0;
+        
+    }
+}
+.dropdown ul li ul li:hover{
+    background-color: #f14548;
+}
