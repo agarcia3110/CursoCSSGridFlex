@@ -1,47 +1,42 @@
-// VARIABLES
-// Colores
-$principal: #33c3f0;
-$gris: #e1e1e1;
-$blanco: #ffffff;
+@import "scss/variables";
+@import "scss/mixin";
+
+body {
+    font-family: $fuente_principal;
+}
 
 .contenedor {
-  max-width: 1100px;
-  margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .oculto {
-  display: none;
+    display: none;
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .logo {
-    padding: 1.4rem 0;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        padding: 1.4rem 0;
+    }
 }
 
 .carrito-compras {
-  position: relative;
-  &:hover .contenido {
-    display: block;
-    position: absolute;
-    right: 0;
-    background-color: $gris;
-    padding: 1rem;
-    max-width: 400px;
-    img {
-      max-width: 150px;
+    position: relative;
+    &:hover .contenido {
+        display: block;
+        position: absolute;
+        right: 0;
+        background-color: $gris;
+        padding: 1rem;
+        max-width: 400px;
+        img {
+            max-width: 150px;
+        }
+        .boton {
+            @include boton($principal);
+        }
     }
-    .boton{
-      background-color: $principal;
-      padding: .5rem 1rem;
-      display: block;
-      text-align: center;
-      color: $blanco;
-      margin-top: 1rem;
-      text-decoration: none;
-    }
-  }
 }
