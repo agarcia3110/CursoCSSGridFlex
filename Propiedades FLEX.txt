@@ -1,9 +1,14 @@
 ###########################
 # Propiedades CSS básicas #
 ###########################
-* {
-    box-sizing: border-box;
-    margin: 0;
+
+html {
+    @include box-sizing(border-box);
+}
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
 }
 body {
     background-color: #f2f2f2;
@@ -113,6 +118,7 @@ span {
     color: white;
     padding: 0.8rem 3rem;
     margin-top: 1rem;
+    text-align: center;
     display: inline-block;
     text-decoration: none;
 }

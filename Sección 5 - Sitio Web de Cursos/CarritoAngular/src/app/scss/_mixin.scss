@@ -7,3 +7,35 @@
     margin-top: 1rem;
     text-decoration: none;
 }
+
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+
+@mixin background-imagen($image) {
+    background-image: url($image);
+    // background-color: $blanco;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin gradiente($color1, $color2) {
+background: linear-gradient(to right, $color1 0%, $color2 100%);
+}
+@mixin telefono {
+    @media only screen and (min-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: $desktop) {
+        @content;
+    }
+}

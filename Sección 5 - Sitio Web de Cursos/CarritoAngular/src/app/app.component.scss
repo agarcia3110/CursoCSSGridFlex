@@ -1,15 +1,29 @@
 @import "scss/variables";
 @import "scss/mixin";
 
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+
 body {
     font-family: $fuente_principal;
 }
 
 .contenedor {
     max-width: 1100px;
+    width: 90%;
     margin: 0 auto;
 }
 
+.centrado {
+    text-align: center;
+}
 .oculto {
     display: none;
 }
@@ -39,4 +53,111 @@ body {
             @include boton($principal);
         }
     }
+}
+
+.hero {
+    @include background-imagen("../../assets/img/hero.jpg");
+    min-height: 24rem;
+    background-size: cover;
+    color: $blanco;
+    display: flex;
+    align-items: center;
+
+    .contenido-hero {
+        // flex: 1;
+
+        h2 {
+            font-weight: 400;
+            font-size: 2.6rem;
+            margin: 2rem 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+
+        form {
+            position: relative;
+            @include tablet {
+                width: 40%;
+            }
+            input[type="submit"] {
+                @include background-imagen("../../assets/img/lupa.png");
+                margin: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 3rem;
+                height: 3rem;
+                display: block;
+                text-indent: -9999px;
+                border: none;
+                cursor: pointer;
+            }
+            input[type="text"] {
+                width: 100%;
+                height: 3.2rem;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.barra {
+    min-height: 5rem;
+    @include gradiente($secundario, $terciario);
+    color: $blanco;
+    .iconos {
+        display: flex;
+        flex-direction: column;
+        padding: 1.4rem 0;
+        @include desktop {
+            flex-direction: row;
+        }
+        .icono {
+            flex: 1;
+            background-position: 5% center !important;
+            @include desktop {
+                background-position: left center !important;
+            }
+            text-align: center;
+            background-size: 2.4rem;
+            &.icono1 {
+                @include background-imagen("../../assets/img/icono1.png");
+            }
+            &.icono2 {
+                @include background-imagen("../../assets/img/icono2.png");
+            }
+            &.icono3 {
+                @include background-imagen("../../assets/img/icono3.png");
+            }
+        }
+    }
+}
+
+.cursos {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .curso {
+        border: black 1rem;
+        padding: 0 .8rem;
+        margin-bottom: 1rem;
+        flex: 1 0 calc(25% - 1rem);
+        .imagen-curso {
+            width: 100%;
+        }
+        .info-curso {
+            padding: 0 .8rem;
+            .boton {
+                @include boton($principal);
+            }
+        }
+    }
+
 }
