@@ -10,28 +10,50 @@ img {
     max-width: 100%;
 }
 h2 {
-	flex: 0 1 100%;
-	text-align: center;
-	font-size: 1.6rem;
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 1.8rem;
+}
+h3 {
+    font-family: "Libre+Baskerville", serif;
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
 }
 .entrada {
-	background-color: #ffffff;
-	margin-bottom: 1rem;
+    background-color: #ffffff;
+    margin-bottom: 1rem;
+}
+.contenido {
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+.contenido span {
+    color: #db008d;
+}
+@media screen and (min-width: 480px) {
+    .contenido-principal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .entrada {
+        flex: 0 1 calc(50% - 1rem);
+    }
 }
 
-@media screen and (min-width:480px) {
-	.contenido-principal {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-	.entrada {
-		flex: 0 1 calc(50% - 1rem);
-	}
+@media screen and (min-width: 768px) {
+    .entrada {
+        flex: 0 1 calc(33% - 1rem);
+    }
 }
-
-@media screen and (min-width:768px) {
-	.entrada {
-		flex: 0 1 calc(33% - 1rem);
-	}
+.boton {
+    background-color: #009fd1;
+    color: white;
+    padding: 0.8rem 3rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-decoration: none;
 }
