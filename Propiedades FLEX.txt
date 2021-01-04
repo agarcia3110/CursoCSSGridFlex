@@ -1,6 +1,29 @@
-#################################
-# Propiedades a nivel del padre #
-#################################
+###########################
+# Propiedades básicas CSS #
+###########################
+
+body {
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;
+}
+
+################
+# Media Querys #
+################
+
+@media screen and (min-width:480px) { }
+@media screen and (min-width:768px) { }
+
+######################################
+# Propiedades FLEX a nivel del padre #
+######################################
 
 # Para usar flex (IMPORTANTE)
 display: flex;
@@ -36,9 +59,9 @@ align-items: flex-end;
 align-items: baseline;
 align-items: center;
 
-####################################
-# Propiedades a nivel de los hijos #
-####################################
+#########################################
+# Propiedades FLEX a nivel de los hijos #
+#########################################
 
 # Ordenacion de elementos hijos en el padre (Valor "-1" para poner el primero)
 order: 0;
@@ -55,6 +78,7 @@ flex-basis: 50%;
 
 # Resume las 3 propiedades de tamaño (grow, shrink y basis) (IMPORTANTE)
 flex: 0 0 50%;
+flex: 0 1 calc(50% - 1rem);
 
 # Alineaciones verticales (lo mismo a nivel de hijo)
 align-self: flex-start;
