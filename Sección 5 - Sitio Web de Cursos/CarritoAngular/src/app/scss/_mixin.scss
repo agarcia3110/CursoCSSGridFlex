@@ -20,7 +20,7 @@
 }
 
 @mixin gradiente($color1, $color2) {
-background: linear-gradient(to right, $color1 0%, $color2 100%);
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
 }
 @mixin telefono {
     @media only screen and (min-width: $telefono) {
@@ -37,5 +37,20 @@ background: linear-gradient(to right, $color1 0%, $color2 100%);
 @mixin desktop {
     @media only screen and (min-width: $desktop) {
         @content;
+    }
+}
+
+@mixin menus() {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex: 1;
+    @include telefono {
+        flex: 0 1 calc(30% - 1rem);
+    }
+    a {
+        text-decoration: none;
+        color: $negro;
+        margin-bottom: 0.5rem;
     }
 }

@@ -139,25 +139,62 @@ body {
 
 .cursos {
     display: flex;
-    flex-direction: column;
-    @include desktop {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
     .curso {
-        border: black 1rem;
-        padding: 0 .8rem;
+        border: 1px solid darken($gris, 10);
         margin-bottom: 1rem;
-        flex: 1 0 calc(25% - 1rem);
+        flex: 1 0 100%;
+        @include telefono {
+            flex: 0 1 calc(50% - 1rem);
+        }
+        @include tablet {
+            flex: 0 1 calc(33% - 1rem);
+        }
+        @include desktop {
+            flex: 0 1 calc(25% - 1rem);
+        }
         .imagen-curso {
             width: 100%;
         }
         .info-curso {
-            padding: 0 .8rem;
+            padding: 1rem;
+            h4 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+            .precio {
+                display: flex;
+                justify-content: space-between;
+                .regular {
+                    text-decoration: line-through;
+                    color: red;
+                }
+                .oferta {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: green;
+                }
+            }
             .boton {
-                @include boton($principal);
+                @include boton($secundario);
             }
         }
     }
+}
 
+.footer {
+    border-top: 1px solid darken($gris, 10);
+    margin-top: 1rem;
+    padding-top: 2rem;
+    .contenedor-footer {
+        display: flex;
+        flex-direction: column;
+        @include telefono {
+            flex-direction: row;
+        }
+        .menu {
+            @include menus();
+        }
+    }
 }
