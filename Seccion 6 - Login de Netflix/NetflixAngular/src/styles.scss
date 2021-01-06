@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/css/variables";
+@import "assets/css/mixins";
+
+html {
+    @include box-sizing("border-box");
+}
+*,
+*:after,
+*:before {
+    @include box-sizing("inherit");
+}
+body {
+    background-color: $negro;
+    font-family: $fuentePrincipal;
+    color: $gris2;
+    @include tablet {
+        background-color: unset;
+        background-image: url("assets/img/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+    }
+}
+img {
+    max-width: 100%;
+}
+
+a {
+    color: $gris2;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}

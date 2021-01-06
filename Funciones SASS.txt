@@ -1,0 +1,56 @@
+###############
+# Mixins SASS #
+###############
+
+@mixin telefono {
+    @media screen and (min-width: $telefono) {
+        @content;
+    };
+}
+@mixin tablet {
+    @media screen and (min-width: $tablet) {
+        @content;
+    };
+}
+@mixin desktop {
+    @media screen and (min-width: $desktop) {
+        @content;
+    };
+}
+@mixin box-sizing($box-model) {
+    box-sizing: $box-model;
+}
+@mixin boton($color) {
+    background-color: $color;
+    color: $blanco;
+    display: block;
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: $radius;
+}
+
+##################
+# Variables SASS #
+##################
+
+// Fuentes
+$fuentePrincipal: Arial, Helvetica, sans-serif;
+
+// Media Queries
+$telefono: 520px;
+$tablet: 768px;
+$desktop: 1200px;
+
+// Colores
+$primario: #e50914;
+$secundario: #e87c03;
+$gris1: #323232;
+$gris2: #8c8c8c;
+$gris3: #454545;
+$blanco: #ffffff;
+$negro: #000000;
