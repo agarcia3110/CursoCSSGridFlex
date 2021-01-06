@@ -49,11 +49,19 @@
                 &:focus {
                     background-color: $gris3;
                     outline: none;
-
                     + label {
                         font-size: 0.6rem;
                         top: 0.5rem;
                     }
+                }
+            }
+            span {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+                text-transform: uppercase;
+                &:hover {
+                    cursor: pointer;
                 }
             }
         }
