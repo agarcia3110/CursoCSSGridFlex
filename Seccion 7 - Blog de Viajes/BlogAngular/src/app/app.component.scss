@@ -1,3 +1,69 @@
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    .barra {
+        background-color: #008fd1;
+        margin-top: 1rem;
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            align-items: center;
+            .logo {
+                padding: 1rem;
+                img {
+                    max-width: 20rem;
+                }
+            }
+            .navegacion {
+                @media screen and (min-width: 768px) {
+                    flex: 0 0 25rem;
+                    margin-right: 1rem;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    @media screen and (min-width: 768px) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    list-style: none;
+                    li {
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-contenido h1 {
+        padding-top: 15rem;
+        color: #008fd1;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        max-width: 25rem;
+    }
+}
+
+/* Hero */
+.hero{
+    background-color: unset;
+    background-image: url('../assets/img/hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh ;
+}
+
 /* Contenido */
 .contenido {
     background-color: white;
