@@ -54,14 +54,14 @@
 }
 
 /* Hero */
-.hero{
+.hero {
     background-color: unset;
-    background-image: url('../assets/img/hero.jpg');
+    background-image: url("../assets/img/hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-    height: 100vh ;
+    height: 100vh;
 }
 
 /* Contenido */
@@ -76,22 +76,22 @@
 }
 .contenido h3 {
     text-align: center;
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.4rem;
 }
 .contenido span {
-    color:#db008d;
+    color: #db008d;
 }
 .boton {
     background-color: #008fd1;
     color: white;
-    padding: .6rem 2rem;
+    padding: 0.6rem 2rem;
     margin-top: 1rem;
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
 }
-@media screen and (min-width:480px) {
+@media screen and (min-width: 480px) {
     .contenido-principal {
         display: flex;
         justify-content: space-between;
@@ -99,12 +99,125 @@
     }
     .entrada {
         flex: 0 1 calc(50% - 1rem);
-
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
     .entrada {
         flex: 0 1 calc(33% - 1rem);
+    }
+}
+
+/* Categorias */
+.categorias ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    @media screen and (min-width: 520px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    justify-content: space-between;
+    .categoria {
+        flex: 1;
+        padding: 4rem 0;
+        text-align: center;
+        &:nth-child(1) {
+            background-color: #008fd1;
+        }
+        &:nth-child(2) {
+            background-color: #db008d;
+        }
+        &:nth-child(3) {
+            background-color: #9800d1;
+        }
+        &:nth-child(4) {
+            background-color: #eca300;
+        }
+        @media screen and (min-width: 520px) {
+            flex: 0 0 50%;
+        }
+        @media screen and (min-width: 768px) {
+            flex: 0 0 25%;
+        }
+
+        a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #008fd1;
+    color: white;
+    .contenedor {
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+        .caja {
+            @media screen and (min-width: 768px) {
+                flex: 1;
+            }
+            padding: 1rem;
+            font-size: 0.8rem;
+            h2 {
+                text-transform: uppercase;
+                font-size: 1.3rem;
+            }
+            /* REDES */
+            .sociales ul {
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                li {
+                    margin-right: 1rem;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .sociales ul li a:before {
+                font-family: "Font Awesome 5 Brands";
+                color: white;
+                font-size: 2rem;
+            }
+            .sociales ul li a[href*="facebook.com"]::before {
+                content: "\f09a";
+            }
+            .sociales ul li a[href*="twitter.com"]::before {
+                content: "\f099";
+            }
+            .sociales ul li a[href*="youtube.com"]::before {
+                content: "\f167";
+            }
+            .sociales ul li a[href*="instagram.com"]::before {
+                content: "\f16d";
+            }
+            .sociales ul li a[href*="pinterest.com"]::before {
+                content: "\f0d2";
+            }
+            .sociales ul li span {
+                display: none;
+            }
+        }
+    }
+    .copyright {
+        background-color: #004d70;
+        margin: 2rem 0 0 0;
+        padding: 1rem 0;
+        text-align: center;
     }
 }
