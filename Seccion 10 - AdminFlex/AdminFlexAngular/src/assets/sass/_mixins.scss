@@ -1,33 +1,41 @@
-@import 'variables';
 
+/** Media Queries **/
 @mixin telefono {
-    @media screen and (min-width: $telefono) {
+    @media only screen and (min-width: #{$telefono}) {
         @content;
-    };
+    }
 }
+
 @mixin tablet {
-    @media screen and (min-width: $tablet) {
+    @media only screen and (min-width: #{$tablet}) {
         @content;
-    };
+    }
 }
+  
 @mixin desktop {
-    @media screen and (min-width: $desktop) {
+    @media only screen and (min-width: #{$desktop}) {
         @content;
-    };
+    }
 }
-@mixin box-sizing($box-model) {
-    box-sizing: $box-model;
-}
+
+
 @mixin boton($color) {
     background-color: $color;
-    color: $blanco;
+    padding: .5rem 1rem;
     display: block;
-    width: 100%;
-    font-size: .8rem;
     text-align: center;
+    color: $blanco;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
-    border: none;
-    border-radius: $radius;
+    transition: background-color .3s ease;
+    &:hover {
+        cursor: pointer;
+        background-color: darken($color, 10);
+    }
+}
+
+@mixin box-sizing($box-model) {
+            box-sizing: $box-model;
+}
+@mixin gradiente($color1, $color2) {
+    background: linear-gradient(to right, $color1 0%, $color2 100%);
 }

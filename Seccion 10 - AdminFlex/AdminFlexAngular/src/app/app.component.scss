@@ -1,0 +1,70 @@
+@import "../assets/sass/variables";
+@import "../assets/sass/mixins";
+
+.pagina {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header {
+        display: flex;
+        .nombre-sitio {
+            flex: 0 0 5rem;
+            @include desktop() {
+                flex: 0 0 20rem;
+            }
+            background-color: $secundario;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            h1 {
+                color: $blanco;
+                margin: 0;
+            }
+            .escritorio {
+                display: none;
+                @include desktop {
+                    display: block;
+                }
+            }
+            .movil {
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+        .barra {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+            background-color: $primario;
+            .menu-izquierdo {
+                display: flex;
+                align-items: center;
+                padding: 1rem;
+            }
+            .menu-derecho {
+                display: flex;
+                align-items: center;
+                .caja {
+                    padding: 0 1rem;
+                    display: flex;
+                    &:hover {
+                        background-color: darken($primario, 5);
+                    }
+                    a {
+                        color: $blanco;
+                        text-decoration: none;
+                        span {
+                            background-color: $terciario;
+                            border-radius: 50%;
+                            padding: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contenedor-principal {
+        flex: 1;
+    }
+}
