@@ -1,0 +1,248 @@
+
+html {
+    @include box-sizing(border-box);
+    height: 100%;
+}
+*,
+*:after,
+*:before {
+  @include box-sizing(inherit);
+}
+body {
+    font-family: $fuente_principal;
+    height: 100%;
+    background-color: $gris;
+}
+img {
+    max-width: 100%;
+}
+.centrado {
+    text-align:center;
+}
+.oculto {
+    display: none;
+}
+
+i {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    color: $blanco;
+}
+
+/** Contenido **/
+.pagina {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.header {
+    display: flex;
+    .nombre-sitio {
+        flex: 0 0 5rem;
+        @include desktop{
+            flex: 0 0 20rem;
+        }
+        background-color: $secundario;
+        padding-left: 1rem;
+        h1 {
+            color: $blanco;
+        }
+
+        .escritorio {
+            display: none;
+            @include desktop{
+                display: block;
+            }
+        }
+        .movil {
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+    .barra {
+        display: flex;
+        flex: 1;
+        background-color: $primario;
+        justify-content: space-between;
+    }
+}
+.menu-izquierdo {
+    display: flex;
+    align-items: center;
+    .fa-arrow-right {
+        display: none;
+    }
+}
+.menu-derecho{
+    display: flex;
+    .caja {
+        padding: 0 1rem;
+        display: flex;
+        &:hover {
+            background-color: darken($primario, 5);
+        }
+    }
+    a {
+        display: flex;
+        color: $blanco;
+        text-decoration: none;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        span {
+            background-color: green;
+            border-radius: 50%;
+            padding: .5rem;
+            margin-left: .5rem;
+        }
+    }
+}
+
+.contenedor-principal {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+}
+
+
+.no-menu.pagina {
+    
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
+
+.sidebar {
+    transition: margin-left .3s ease;
+    background-color: $grisOscuro;
+    flex: 0 0 20rem;
+    color: $blanco;
+    padding: 1rem 2rem 0 2rem;
+
+    .usuario {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img {
+            max-width:60px;
+        }
+        font-weight: bold;
+        span {
+            display: block;
+            font-weight: normal;
+        }
+    }
+    .buscador {
+        margin-top: 1rem;
+        input[type="text"] {
+            border-radius: 10px;
+            height: 3rem;
+            width: 100%;
+            border: none;
+            padding: 1rem;
+        }
+    }
+}
+
+.menu-admin {
+    margin-top: 1rem;
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 1rem;
+    }
+    .menu{
+        list-style: none;
+        padding: 0;
+        > li {
+            padding: .5rem;
+            &:hover {
+                ul {
+                    display: block;
+                }
+            }
+            a {
+                padding: .5rem;
+                color: $blanco;
+                text-decoration: none;
+                transition: padding-left .3s ease;
+                &:hover {
+                    background-color: $primario;
+                    padding-left: 2rem;
+                    cursor: pointer;
+                }
+            }
+            ul {
+                margin-top: 1rem;
+                display: none;
+                list-style: none;
+                padding: 1rem;
+                background-color: darken($grisOscuro, 3);
+                li {
+                    margin-bottom: 1rem;
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contenido {
+    flex: 1;
+    padding: 2rem;
+}
+
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .campo {
+        margin-bottom: 1rem;
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        @include tablet{
+            flex: 0 0 calc(50% - 1rem);
+        }
+
+        &.expandir {
+            flex:0 0 calc(100% - 1rem);
+            label {
+                flex: 0 0 calc(12.5%);
+            }
+            textarea {
+                flex:1;
+            }
+        }
+        label {
+            flex:  0 0 25%;
+        }
+        input[type="text"] {
+            flex: 1 0 75%
+        }
+        .opciones {
+            display: flex;
+            flex-wrap: wrap;
+            flex:1;
+
+            label {
+                padding-left: 1rem;
+            }
+        }
+        &.enviar {
+            display: flex;
+            justify-content: flex-end;
+            .boton {
+                @include boton($primario);
+            }
+        }
+    }
+}
