@@ -1,0 +1,58 @@
+/***************
+* Media Querys *
+***************/
+
+@media screen and (min-width:480px) { }
+@media screen and (min-width:768px) { }
+
+/**************************
+* Propiedades CSS FUENTES *
+**************************/
+
+h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+span {
+    color: #db008d;
+}
+
+/**************************
+* Propiedades CSS BOTONES *
+**************************/
+
+.boton {
+    background-color: $color;
+    color: $blanco;
+    display: block;
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: $radius;
+}
+
+/*****************************
+* Propiedades CSS BACKGROUND *
+*****************************/
+
+body {
+    background-color: unset;
+    background-image: url("assets/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+/***************
+* COLORES HTML *
+***************/
+
+// Gris claro de fondo: #f2f2f2
+// Span rosa: #db008d;
+// Azul cielo botón: #009fd1
