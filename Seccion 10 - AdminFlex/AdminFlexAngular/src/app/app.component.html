@@ -1,13 +1,13 @@
-<div class="pagina">
+<div class="pagina" [ngClass]="{'no-menu': !sidebarDesplegado}">
     <header class="header">
         <div class="nombre-sitio">
             <h1 class="escritorio">Admin Flex</h1>
             <h1 class="movil">AF</h1>
         </div>
         <div class="barra">
-            <div class="menu-izquierdo">
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-right"></i>
+            <div class="menu-izquierdo" (click)='desplegarOcultarSidebar()'>
+                <i [ngClass]="{'fas fa-arrow-left': sidebarDesplegado}"></i>
+                <i [ngClass]="{'fas fa-arrow-right': !sidebarDesplegado}"></i>
             </div>
             <div class="menu-derecho">
                 <div class="caja mensaje">
@@ -33,6 +33,97 @@
         </div>
     </header>
     <main class="contenedor-principal">
-
+        <aside class="sidebar">
+            <div class="usuario">
+                <img src="../assets/img/usuario.svg" alt="">
+                <p>Bienvenid@: <span>Admin</span></p>
+            </div>
+            <div class="buscador">
+                <input type="text" placeholder="Buscar...">
+            </div>
+            <div class="menu-admin">
+                <h2>Menú de administración</h2>
+                <ul class="menu">
+                    <li>
+                        <a href=""><i class="fas fa-address-book"></i>Clientes</a>
+                        <ul>
+                            <li><a href=""><i class="fas fa-list">Ver todos</i></a></li>
+                            <li><a href=""><i class="fas fa-plus">Agregar nuevo</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fas fa-chart-line"></i>Ventas</a>
+                        <ul>
+                            <li><a href=""><i class="fas fa-list">Ver todos</i></a></li>
+                            <li><a href=""><i class="fas fa-plus">Agregar nuevo</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fas fa-box"></i>Inventario</a>
+                        <ul>
+                            <li><a href=""><i class="fas fa-list">Ver todos</i></a></li>
+                            <li><a href=""><i class="fas fa-plus">Agregar nuevo</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fas fa-file-alt"></i>Clientes</a>
+                        <ul>
+                            <li><a href=""><i class="fas fa-list">Ver todos</i></a></li>
+                            <li><a href=""><i class="fas fa-plus">Agregar nuevo</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fas fa-calendar-alt"></i>Calendario</a>
+                        <ul>
+                            <li><a href=""><i class="fas fa-list">Ver todos</i></a></li>
+                            <li><a href=""><i class="fas fa-plus">Agregar nuevo</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href=""><i class="fas fa-pencil-alt"></i>Editar perfil</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="contenido">
+            <h2 class="encabezado">Administracion de Clientes</h2>
+            <form action="#" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre cliente</label>
+                    <input type="text" id="nombre">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Apellido cliente</label>
+                    <input type="text" id="apeliddo">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Empresa</label>
+                    <input type="text" id="empresa">
+                </div>
+                <div class="campo">
+                    <label for="nombre">Dirección</label>
+                    <input type="text" id="direccion">
+                </div>
+                <div class="campo expandir">
+                    <label for="nombre">Otra información</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="campo expandir">
+                    <label for="nombre">Membresía</label>
+                    <div class="opciones">
+                        <input type="radio" id="normal" name="contact" value="normal">
+                        <label for="normal">Normal</label>
+                        <input type="radio" id="basico" name="contact" value="basico">
+                        <label for="basico">Básico</label>
+                        <input type="radio" id="premiun" name="contact" value="premiun">
+                        <label for="premiun">Premiun</label>
+                        <input type="radio" id="gold" name="contact" value="gold">
+                        <label for="gold">Gold</label>
+                    </div>
+                </div>
+                <div class="campo expandir enviar">
+                    <input type="submit" value="Enviar" class="boton">
+                </div>
+            </form>
+        </div>
     </main>
 </div>

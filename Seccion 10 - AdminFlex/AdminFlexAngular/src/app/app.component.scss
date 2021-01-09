@@ -41,6 +41,13 @@
                 display: flex;
                 align-items: center;
                 padding: 1rem;
+                i {
+                    color: $blanco;
+                    font-size: 1.6rem;
+                }
+                .fa-arrow-right {
+                    // display: none;
+                }
             }
             .menu-derecho {
                 display: flex;
@@ -57,7 +64,7 @@
                         span {
                             background-color: $terciario;
                             border-radius: 50%;
-                            padding: .5rem;
+                            padding: 0.5rem;
                         }
                     }
                 }
@@ -66,5 +73,129 @@
     }
     .contenedor-principal {
         flex: 1;
+        display: flex;
+        .sidebar {
+            background-color: $grisOscuro;
+            flex: 0 0 20rem;
+            padding: 1rem;
+            transition: margin-left, 0.3s ease;
+            .usuario {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: $blanco;
+                img {
+                    max-width: 5rem;
+                }
+                font-weight: normal;
+                span {
+                    font-weight: bold;
+                    display: block;
+                }
+            }
+            .buscador {
+                margin-top: 1rem;
+                input[type="text"] {
+                    width: 100%;
+                    height: 3rem;
+                    border: none;
+                    border-radius: 10px;
+                    padding-left: 1rem;
+                }
+            }
+            .menu-admin {
+                margin-top: 2rem;
+                .menu {
+                    list-style: none;
+                    padding: 0 0 0 1rem;
+                    > li {
+                        padding: 0.5rem;
+                        &:hover {
+                            ul {
+                                display: block;
+                            }
+                        }
+                        a {
+                            color: $blanco;
+                            text-decoration: none;
+                            padding: 0.5rem;
+                            transition: padding-left 0.3s ease;
+                            &:hover {
+                                background-color: $primario;
+                                padding-left: 2rem;
+                            }
+                        }
+                        ul {
+                            display: none;
+                            margin-top: 1rem;
+                            list-style: none;
+                            background-color: darken($grisOscuro, 3);
+                            padding: 1rem;
+                            li {
+                                margin-bottom: 1rem;
+                                &:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contenido {
+            flex: 1;
+            padding: 2rem;
+            .formulario {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .campo {
+                    flex: 0 0 100%;
+                    @include tablet {
+                        flex: 0 0 calc(50% - 1rem);
+                    }
+                    display: flex;
+                    margin-bottom: 1rem;
+                    align-items: center;
+                    &.expandir {
+                        flex: 0 0 calc(100%);
+                        align-items: flex-start;
+                        label {
+                            flex: 0 0 12.5%;
+                        }
+                        textarea {
+                            flex: 1;
+                        }
+                    }
+                    label {
+                        flex: 0 0 25%;
+                    }
+                    input[type="text"] {
+                        flex: 0 0 75%;
+                        height: 2rem;
+                    }
+                    .opciones {
+                        display: flex;
+                        flex: 1;
+                        label {
+                            padding-left: 1rem;
+                        }
+                    }
+                    &.enviar {
+                        display: flex;
+                        justify-content: flex-end;
+                        .boton {
+                            @include boton($primario);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.no-menu {
+        .contenedor-principal .sidebar {
+            // flex: 0 0 0;
+            margin-left: -20rem;
+        }
     }
 }

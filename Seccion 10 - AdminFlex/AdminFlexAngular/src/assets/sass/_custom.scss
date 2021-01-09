@@ -1,23 +1,24 @@
 html {
-  @include box-sizing(border-box);
-  height: 100%;
+    @include box-sizing(border-box);
+    height: 100%;
 }
 *,
 *:after,
 *:before {
-@include box-sizing(inherit);
+    @include box-sizing(inherit);
 }
 body {
-  font-family: $fuente_principal;
-  height: 100%;
-  margin: 0;
+    font-family: $fuente_principal;
+    height: 100%;
+    margin: 0;
+    background-color: $gris;
 }
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 .centrado {
-  text-align:center;
+    text-align: center;
 }
 .oculto {
-  display: none;
+    display: none;
 }

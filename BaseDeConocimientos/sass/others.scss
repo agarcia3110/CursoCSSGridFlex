@@ -2,8 +2,10 @@
 * Media Querys *
 ***************/
 
-@media screen and (min-width:480px) { }
-@media screen and (min-width:768px) { }
+@media screen and (min-width: 480px) {
+}
+@media screen and (min-width: 768px) {
+}
 
 /**************************
 * Propiedades CSS FUENTES *
@@ -28,7 +30,7 @@ span {
     color: $blanco;
     display: block;
     width: 100%;
-    font-size: .8rem;
+    font-size: 0.8rem;
     text-align: center;
     text-decoration: none;
     padding: 0.5rem 1rem;

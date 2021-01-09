@@ -1,19 +1,19 @@
-@import 'variables';
+@import "variables";
 
 @mixin telefono {
     @media screen and (min-width: $telefono) {
         @content;
-    };
+    }
 }
 @mixin tablet {
     @media screen and (min-width: $tablet) {
         @content;
-    };
+    }
 }
 @mixin desktop {
     @media screen and (min-width: $desktop) {
         @content;
-    };
+    }
 }
 @mixin box-sizing($box-model) {
     box-sizing: $box-model;
@@ -23,7 +23,7 @@
     color: $blanco;
     display: block;
     width: 100%;
-    font-size: .8rem;
+    font-size: 0.8rem;
     text-align: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
