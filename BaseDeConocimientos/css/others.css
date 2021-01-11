@@ -26,8 +26,8 @@ span {
 **************************/
 
 .boton {
-    background-color: $color;
-    color: $blanco;
+    background-color: blue;
+    color: white;
     display: block;
     width: 100%;
     font-size: 0.8rem;
@@ -36,7 +36,7 @@ span {
     padding: 0.5rem 1rem;
     margin-top: 1rem;
     border: none;
-    border-radius: $radius;
+    border-radius: 50px;
 }
 
 /*****************************
@@ -55,6 +55,6 @@ body {
 * COLORES HTML *
 ***************/
 
-// Gris claro de fondo: #f2f2f2
-// Span rosa: #db008d;
-// Azul cielo botón: #009fd1
+/* Gris claro de fondo: #f2f2f2; */
+ /* Span rosa: #db008d; */
+ /* Azul cielo botón: #009fd1 */

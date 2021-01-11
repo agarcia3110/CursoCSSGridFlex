@@ -3,26 +3,26 @@
 *************************************/
 
 .padre {
-    // Para usar flex (IMPORTANTE)
+    /* Para usar flex (IMPORTANTE) */
     display: flex;
 
-    // Direccion de ordenacion (row, column, row-reverse, colum-reverse)
+    /* Direccion de ordenacion (row, column, row-reverse, colum-reverse) */
     flex-direction: row;
 
-    // Para ajuste de los hijos dentro del padre (nowrap, wrap, wrap-reverse) (IMPORTANTE)
+    /* Para ajuste de los hijos dentro del padre (nowrap, wrap, wrap-reverse) (IMPORTANTE) */
     flex-wrap: wrap;
 
-    // Direccion y ajuste: simplifica las dos propiedades previas (IMPORTANTE)
+    /* Direccion y ajuste: simplifica las dos propiedades previas (IMPORTANTE) */
     flex-flow: row wrap;
 
-    // Alineaciones horizontales
+    /* Alineaciones horizontales */
     justify-content: flex-start;
     justify-content: flex-end;
     justify-content: center;
     justify-content: space-around;
     justify-content: space-around;
 
-    // Alineaciones verticales
+    /* Alineaciones verticales */
     height: 400px;
     align-items: flex-start;
     align-items: flex-end;
@@ -35,24 +35,24 @@
 ****************************************/
 
 .hijos {
-    // Ordenacion de elementos hijos en el padre (Valor "-1" para poner el primero)
+    /* Ordenacion de elementos hijos en el padre (Valor "-1" para poner el primero) */
     order: 0;
 
-    // Para hacer crecer el tamaño del hijo (se divide el ancho disponible entre el número de grow's, "1" por defecto)
+    /* Para hacer crecer el tamaño del hijo (se divide el ancho disponible entre el número de grow's, "1" por defecto) */
     flex-grow: 1;
 
-    // Para hacer decrecer el tamaño de los otros hijos
+    /* Para hacer decrecer el tamaño de los otros hijos */
     flex-shrink: 0;
     flex-grow: 0;
 
-    // Ancho mímino del hijo
+    /* Ancho mímino del hijo */
     flex-basis: 50%;
 
-    // Resume las 3 propiedades de tamaño (grow, shrink y basis) (IMPORTANTE)
+    /* Resume las 3 propiedades de tamaño (grow, shrink y basis) (IMPORTANTE) */
     flex: 0 0 50%;
     flex: 0 1 calc(50% - 1rem);
 
-    // Alineaciones verticales (lo mismo a nivel de hijo)
+    /* Alineaciones verticales (lo mismo a nivel de hijo) */
     align-self: flex-start;
     align-self: flex-end;
     align-self: baseline;
@@ -64,10 +64,10 @@
 ******************************************/
 
 .padre {
-    // Para usar CSS Grid (IMPORTANTE)
+    /* Para usar CSS Grid (IMPORTANTE) */
     display: grid;
 
-    // División del Grid (2 dimensiones)
+    /* División del Grid (2 dimensiones) */
     grid-template-columns: 50% 30% 20%;
     grid-template-columns: 2fr repeat(3, 1fr);
     grid-template-columns: repeat(3, 33.3%);
@@ -75,24 +75,24 @@
     grid-template-rows: 2fr repeat(3, 1fr);
     grid-template-rows: repeat(2, 50%);
 
-    // Shorthands (rows - columns)
+    /* Shorthands (rows - columns) */
     grid: 50% 50%/ 30% 30% 30%;
     grid: 2fr / repeat(3, 1fr);
     grid: repeat(2, 50%) /  50% repeat(2, 10% 15%);
-    grid: auto / repeat(3, 1fr); // Sólo columnas
+    grid: auto / repeat(3, 1fr);  /* Sólo columnas */
 
-    // Posicionamiento auto
+    /* Posicionamiento auto */
     grid-auto-flow: row column dense;
 
-    // Template Areas
+    /* Template Areas */
     grid-template-areas:
         "header header header header"
         "principal principal principal sidebar"
         ". footer footer footer";
-    grid: 100px auto 100px / repeat(4, 25%); //OPCIONAL
-    gap: 1rem; //OPCIONAL
+    grid: 100px auto 100px / repeat(4, 25%); /* OPCIONAL */
+    gap: 1rem; /* OPCIONAL */
 
-    // Alineaciones: las mismas que en Flex
+    /* Alineaciones: las mismas que en Flex */
     justify-content: flex-end;
     justify-content: center;
     justify-content: flex-start;
@@ -102,20 +102,20 @@
 }
 
 .hijos {
-    // Posicionar elementos
+    /* Posicionar elementos */
     grid-column-start: 1;
     grid-column-end: 3;
     grid-column: 1 / 3;
-    grid-column: 1 / span 1; // Expande x columnas
+    grid-column: 1 / span 1; /* Expande x columnas */
     grid-row-start: 1;
     grid-row-end: 3;
     grid-row: 1 / 3;
-    grid-row: 1 / span 1; // Expande x filas
+    grid-row: 1 / span 1; /* Expande x filas */
 
-    // Shorthands (rows - columns)
+    /* Shorthands (rows - columns) */
     grid-area: 1 / 1 / 3 / 3;
 
-    // Template Areas
+    /* Template Areas */
     grid-area: header;
     grid-area: principal;
 }
