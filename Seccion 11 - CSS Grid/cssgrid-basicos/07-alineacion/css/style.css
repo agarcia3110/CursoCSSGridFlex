@@ -17,8 +17,7 @@ h2 {
 
     grid: auto / repeat(3, 1fr);
 
-    grid-column-gap: 1rem;
-    grid-row-gap: 1rem;
+    gap: 1rem 1rem;
 
 
     grid-template-columns: 30% 30%;
@@ -26,6 +25,9 @@ h2 {
     justify-content: flex-end;
     justify-content: center;
     justify-content: flex-start;
+    align-items: center;
+    align-items: stretch;
+    align-items: start;
 }
 
 .servicio {

@@ -5,6 +5,11 @@ h2 {
 .servicios {
     border: 3px solid black;
     height: 300px;
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+    grid-template-rows: 50% 50%;
+    grid-auto-flow: row column dense;
+    ;
 }
 
 .servicio {
@@ -15,10 +20,20 @@ h2 {
 .servicio-1 {
     background-color: darkviolet;
 }
-
 .servicio-2 {
     background-color: limegreen;
+    grid-column: 1 / 3;
 }
 .servicio-3 {
+    background-color: teal;
+    grid-column: 2 /  4;
+}
+.servicio-4 {
+    background-color: darkviolet;
+}
+.servicio-5 {
+    background-color: limegreen;
+}
+.servicio-6 {
     background-color: teal;
 }

@@ -6,6 +6,9 @@ h2 {
     border: 3px solid black;
     height: 300px;
     display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(2, 50%);
+    grid: repeat(2, 50%) /  50% repeat(2, 10% 15%);
 }
 
 .servicio {
